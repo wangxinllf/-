@@ -1,0 +1,134 @@
+/* 
+	样式模块化
+		@规则 
+			@charset    设置样式表额编码
+			@import     导入其他的样式文件
+            @meida       媒体查询
+            @font-face   自定义字体
+*/
+@import 'reset.css'; 
+
+/* 图标看作字体，自定义 */
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/iconfont.woff2') format('woff2'),
+         url('../font/iconfont.woff') format('woff'),
+         url('../font/iconfont.ttf') format('truetype'),
+         url('../font/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+/* <!-- 最顶部导航栏 --> */
+#headMessage li {
+    float: left;
+    line-height: 35px;
+    padding: 0 6px;
+    font-size: 0;  /* 设置图标与文字之间的距离为0 ,不然默认间距为一个空格，既一个字的宽度，然后再分别设置子标签的文字大小就可以了*/
+}
+#headMessage a {
+    color: #6c6c6c;
+    font-size: 12px;     /* 设置图标与文字之间的距离为0 */
+}
+#headMessage a:hover {
+    color:#f40;
+}
+#headMessage a.login {
+    color: #f22e00;
+}
+#headMessage span {
+    font-size: 12px;
+}
+#headMessage .iconfont.arrow {
+    margin-left: 7px;
+}
+#headMessage li strong {
+    font-size: 12px;
+    color: #f22e00;
+}
+/* #headMessage span.store {
+    color: #6c6c6c;
+} */
+#headMessage .line {
+    font-size: 12px;
+    color: #ddd;
+    padding: 0 5px;
+}
+
+
+/* 头部 广告区域  */
+#headAd {
+    background-color: #e71b1b;
+}
+#headAd li {
+    float: left;
+}
+#headAd .go {
+    display: block;
+    padding: 10px 10px 10px 15px;
+}
+#headAd .go img{
+    width: 80px;
+    height: 80px;
+}
+#headAd ul {
+    margin-top: 13px;
+}
+#headAd li {
+    float: left;
+    width: 209px;
+	height: 75px;
+    margin-right: 10px;
+    padding: 12px 15px 11px 15px;
+    box-sizing: border-box; 
+
+    /* 
+		盒模型
+			1、标准盒模型
+				总宽度=border(左右)+width+padding(左右)
+				总高度=border(上下)+height+padding(上下)
+			2、IE盒模型(怪异盒模型)
+				总宽度=width;
+				总高度=height;
+	 */
+
+}
+#headAd h3 {
+    font-size: 20px;
+    line-height: 28px;
+}
+#headAd p {
+    font-size: 14px;
+    line-height: 20px;
+}
+#headAd a{
+    color: #fff;
+    display: block;
+}
+#headAd li a img {
+    width: 52px;
+    height: 52px;
+    border-radius: 5px;
+}
+#headAd .item1 {
+    background: url(../images/adbg_01.png);
+} 
+#headAd .item2 {
+    background: url(../images/adbg_02.png);
+}
+#headAd .item3 {
+    background: url(../images/adbg_03.png);
+}
+#headAd .item4 {
+    background: url(../images/adbg_04.png);
+}
+#headAd .item5 {
+    background: url(../images/adbg_05.png);
+    margin-right: 0;
+}
